@@ -52,4 +52,19 @@ public class CustomList extends ArrayAdapter<City> {
     public void addCity(City city){
         cities.add(city);
     }
+
+    /**
+     * Determines if a given city belongs in the list.
+     *
+     * @param city This is a candidate city to check
+     * @return true if this list contains the city;
+     * false if the list doesn't contain the city.
+     */
+    public boolean hasCity(City city) {
+        for (City loopCity : cities) {
+            if (loopCity.compareTo(city) == 0 )
+                return true;
+        }
+        return false;
+    }
 }
